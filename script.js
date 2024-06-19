@@ -5,6 +5,11 @@ let salmon = '#fa8072'
 createSquares(quantity)
 
 
+function fillSquare(event = new Event()) {
+  if (event.target.id == 'grid')
+    return
+  event.target.style.backgroundColor = salmon
+}
 
 function createSquares(quantity = 2) {
   quantity = parseInt(quantity)
