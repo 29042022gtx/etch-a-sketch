@@ -1,0 +1,8 @@
+:root {
+  --khaki: #fff8bb;
+}
+
+body {
+  background-color: var(--khaki);
+}
+
