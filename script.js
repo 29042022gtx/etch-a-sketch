@@ -1,14 +1,34 @@
 let grid = document.querySelector('#grid')
 grid.addEventListener('mouseover', fillSquare)
-let quantity = 20
-let salmon = '#fa8072'
-createSquares(quantity)
+let newGridBtn = document.querySelector('#new-grid')
+newGridBtn.onclick = newGrid
+let salmon = 'rgba(250, 128, 115, .2)'
+createSquares(10)
 
+function newGrid() {
+  let quantity = getQuantity()
+  removeAllChildNodes(grid)
+  createSquares(quantity)
+}
+
+function getQuantity() {
+  let quantity = prompt('Quantity: ', 2)
+  quantity = parseInt(quantity)
+  return quantity
+}
+
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+  }
+}
 
 function fillSquare(event = new Event()) {
   if (event.target.id == 'grid')
     return
-  event.target.style.backgroundColor = salmon
+  let color = event.target.style.backgroundColor
+  console.log(color)
+  event.target.style.backgroundColor = increaseOpacity(color)
 }
 
 function createSquares(quantity = 2) {
@@ -23,6 +43,7 @@ function createSquares(quantity = 2) {
     for (let j = 0; j < quantity; j++) {
       square = document.createElement('div')
       square.style.width = squareWidth
+      square.style.backgroundColor = salmon
       grid.appendChild(square)
     }
   }

@@ -2,11 +2,22 @@
   --khaki: #fff8bb;
   --light-salmon: #fa807220;
   --salmon: #fa8072;
+  --salmon: rgba(250, 128, 115, .1);
   --honey: #ffcf22;
 }
 
 body {
   background-color: var(--khaki);
+}
+
+#new-grid {
+  padding: 4px 8px;
+  margin-bottom: 4px;
+  color: white;
+  background-color: var(--honey);
+  text-shadow: 0 0 10px var(--salmon);
+  border: 1px solid var(--salmon);
+  border-radius: 4px;
 }
 
 #grid {
