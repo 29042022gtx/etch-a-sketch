@@ -1,8 +1,25 @@
 :root {
   --khaki: #fff8bb;
+  --salmon: salmon;
+  --honey: #ffcf22;
 }
 
 body {
   background-color: var(--khaki);
+}
+
+#grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  border: 1px solid var(--honey);
+}
+
+#grid div {
+  box-sizing: border-box;
+  /* width: 20%; */
+  aspect-ratio: 1;
+  background-color: var(--salmon);
+  border: inherit;
 }
 
