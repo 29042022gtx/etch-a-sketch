@@ -5,6 +5,22 @@ newGridBtn.onclick = newGrid
 let salmon = 'rgba(250, 128, 115, .2)'
 createSquares(10)
 
+
+function increaseOpacity(rgba) {
+  opactiy = getOpacity(rgba)
+  opactiy += .2
+  rgba = rgba.slice(0, -3)
+  return rgba + opactiy + ')'
+}
+
+function getOpacity(s = '') {
+  s = s.slice(-3, -1)
+  let n = parseFloat(s)
+  if (!n)
+    return 0
+  return n
+}
+
 function newGrid() {
   let quantity = getQuantity()
   removeAllChildNodes(grid)
