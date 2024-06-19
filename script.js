@@ -1,6 +1,10 @@
-const grid = document.querySelector('#grid')
-let quantity = 50
+let grid = document.querySelector('#grid')
+grid.addEventListener('mouseover', fillSquare)
+let quantity = 20
+let salmon = '#fa8072'
 createSquares(quantity)
+
+
 
 function createSquares(quantity = 2) {
   quantity = parseInt(quantity)
