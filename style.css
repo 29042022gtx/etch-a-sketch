@@ -2,12 +2,16 @@
   --khaki: #fff8bb;
   --light-salmon: #fa807220;
   --salmon: #fa8072;
-  --salmon: rgba(250, 128, 115, .1);
   --honey: #ffcf22;
 }
 
 body {
   background-color: var(--khaki);
+}
+
+.btn-wrp {
+  max-width: 600px;
+  margin: auto;
 }
 
 #new-grid {
@@ -16,14 +20,19 @@ body {
   color: white;
   background-color: var(--honey);
   text-shadow: 0 0 10px var(--salmon);
-  border: 1px solid var(--salmon);
+  border: 1px solid var(--light-salmon);
   border-radius: 4px;
+}
+
+#new-grid:active {
+  border-color: var(--salmon);
 }
 
 #grid {
   display: flex;
   flex-wrap: wrap;
   max-width: 600px;
+  margin: auto;
   border: 1px solid var(--honey);
 }
 
@@ -33,6 +42,5 @@ body {
   aspect-ratio: 1;
   background-color: var(--light-salmon);
   border: inherit;
-  /* opacity: .1; */
+  transition: all .4s;
 }
-

@@ -1,14 +1,14 @@
 let grid = document.querySelector('#grid')
-grid.addEventListener('mouseover', fillSquare)
 let newGridBtn = document.querySelector('#new-grid')
+grid.addEventListener('mouseover', fillSquare)
 newGridBtn.onclick = newGrid
-let salmon = 'rgba(250, 128, 115, .2)'
+let salmon = 'rgba(250, 128, 115, 0.2)'
 createSquares(10)
 
 
 function increaseOpacity(rgba) {
   opactiy = getOpacity(rgba)
-  opactiy += .2
+  opactiy += 0.2
   rgba = rgba.slice(0, -3)
   return rgba + opactiy + ')'
 }
